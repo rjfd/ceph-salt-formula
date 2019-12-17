@@ -1,0 +1,11 @@
+venv*
+virtualenv*
+.vscode
+**/__pycache__
+*.log
+**.pyc
+*.egg-info
+.eggs
+.coverage
+.pytest_cache
+.tox

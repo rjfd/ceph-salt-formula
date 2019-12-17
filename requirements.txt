@@ -1,0 +1,3 @@
+pylint==2.4.4
+SaltPyLint==2019.11.14
+

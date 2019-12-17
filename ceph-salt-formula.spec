@@ -47,9 +47,8 @@ Salt Formula to deploy Ceph clusters.
 %build
 
 %install
-mkdir -p %{buildroot}%{fdir}/states/%{fname}/
 mkdir -p %{buildroot}%{fdir}/metadata/%{fname}/
-cp -R states/* %{buildroot}%{fdir}/states/%{fname}/
+cp -R salt/* %{buildroot}%{fdir}/states/
 cp metadata/* %{buildroot}%{fdir}/metadata/%{fname}/
 
 mkdir -p %{buildroot}%{_datadir}/%{fname}/pillar
