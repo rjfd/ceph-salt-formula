@@ -1,3 +1,7 @@
+{% import 'macros.yml' as macros %}
+
+{{ macros.begin_stage('Deployment of Ceph OSDs') }}
+
 {% set dg_list = pillar['ceph-salt'].get('storage', {'drive_groups': []}).get('drive_groups', []) %}
 {% for dg_spec in dg_list %}
 
@@ -7,3 +11,5 @@ deploy ceph osds ({{ loop.index }}/{{ dg_list | length }}):
         echo '{{ dg_spec }}' | ceph orchestrator osd create -i -
 
 {% endfor %}
+
+{{ macros.end_stage('Deployment of Ceph OSDs') }}
